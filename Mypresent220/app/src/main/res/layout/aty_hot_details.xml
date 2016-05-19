@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!-- 抽屉效果,-->
+    <!--<android.support.v4.widget.DrawerLayout-->
+    <!--android:id="@+id/drawer_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+    <!-- 协调布局-->
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- AppBarLayout 是继承LinerLayout实现的一个ViewGroup容器组件，它是为了Material Design设计的App Bar，支持手势滑动操作。-->
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="@color/color_text_selected"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:titleEnabled="false">
+                <!-- scrollFlags是确定哪个组件是可滑动的-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/details_aty_vp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <LinearLayout
+                            android:id="@+id/details_aty_dotLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <View
+                                android:id="@+id/details_aty_viewOne"
+                                android:layout_width="8dp"
+                                android:layout_height="8dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@mipmap/ic_launcher" />
+
+                            <View
+                                android:id="@+id/details_aty_viewTwo"
+                                android:layout_width="8dp"
+                                android:layout_height="8dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@mipmap/ic_launcher" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/details_aty_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="名称"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/details_aty_money"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:text="金钱"
+                        android:textColor="@color/color_text_selected"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/details_aty_present"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="介绍"
+                        android:textSize="15dp" />
+                </LinearLayout>
+                <!-- 系统获取xml actionBar的高度-->
+
+                <!-- popupTheme是弹出菜单的样式-->
+                <!--<include layout="@layout/include_aty_title"-->
+                <!--app:layout_collapseMode="pin"-->
+                <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>-->
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/tool_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    app:layout_collapseMode="pin"
+
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/details_aty_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                app:tabMode="fixed" />
+        </android.support.design.widget.AppBarLayout>
+
+        <!-- 放上这个是为了加载toolbar下面的组件,这样才可以折叠-->
+
+        <!--<android.support.v4.widget.NestedScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/details_aty_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        <!--</android.support.v4.widget.NestedScrollView>-->
+    </android.support.design.widget.CoordinatorLayout>
+    <!-- 抽屉内容 -->
+    <!--<LinearLayout-->
+    <!--android:id="@+id/drawer_view"-->
+    <!--android:layout_width="200dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_gravity="left"-->
+    <!--android:background="@color/theme_color"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<Button-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="11" />-->
+
+    <!--<Button-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="22" />-->
+    <!--</LinearLayout>-->
+    <!--</android.support.v4.widget.DrawerLayout>-->
+
+</LinearLayout>

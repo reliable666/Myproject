@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/replace_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zero_dp"
+        android:layout_weight="1"
+        android:orientation="vertical" />
+
+    <!-- RadioGroup装载单选按钮的容器 -->
+    <!-- RadioButton 单选按钮 放在单选容器中 -->
+    <!-- 实现单选功能 -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/one_dp"
+        android:background="@color/color_line_black" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/frm_home_rbtn"
+            android:layout_width="@dimen/zero_dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:layout_marginLeft="@dimen/fifteen_dp"
+            android:drawableTop="@drawable/selectorhome"
+            android:gravity="center"
+            android:text="@string/home_frm_name"
+            android:textColor="@color/color_radiobutton" />
+
+
+        <RadioButton
+            android:id="@+id/frm_hot_rbtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/fifteen_dp"
+            android:button="@null"
+            android:drawableTop="@drawable/selectorhot"
+            android:gravity="center"
+            android:textColor="@color/color_radiobutton"
+            android:text="@string/hot_frm_name" />
+
+
+        <RadioButton
+            android:id="@+id/frm_sort_rbtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fifteen_dp"
+            android:button="@null"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selectormy"
+            android:gravity="center"
+            android:textColor="@color/color_radiobutton"
+            android:text="@string/sort_frm_name" />
+
+
+        <RadioButton
+            android:id="@+id/frm_my_rbtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fifteen_dp"
+            android:layout_marginRight="@dimen/fifteen_dp"
+            android:button="@null"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selectorsort"
+            android:gravity="center"
+            android:text="@string/my_frm_name"
+            android:textColor="@color/color_radiobutton"
+            />
+
+    </RadioGroup>
+</LinearLayout>

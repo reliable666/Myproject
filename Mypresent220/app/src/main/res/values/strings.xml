@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My present</string>
+    <string name="home_frm_name">指南</string>
+    <string name="hot_frm_name">热门</string>
+    <string name="sort_frm_name">分类</string>
+    <string name="my_frm_name">我的</string>
+    <string name="open">打开</string>
+    <string name="close">关闭</string>
+</resources>

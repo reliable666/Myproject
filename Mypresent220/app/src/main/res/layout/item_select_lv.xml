@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+   >
+    <!--<android.support.v7.widget.CardView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+        <!--android:orientation="vertical"-->
+        <!--android:clickable="true"-->
+        <!--app:cardCornerRadius="10dp"-->
+        <!--android:layout_margin="15dp"-->
+        <!-- -->
+        <!--android:descendantFocusability="blocksDescendants"-->
+        <!--android:foreground="?android:attr/selectableItemBackground">-->
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+    <!--android:descendantFocusability="blocksDescendants">-->
+
+    <ImageView
+        android:id="@+id/item_select_list_iv"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+
+        />
+    <TextView
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/item_select_list_iv"
+        android:id="@+id/item_select_list_tv"
+        android:text="美好的一天就这么没了!"/>
+</RelativeLayout>
+    <!--</android.support.v7.widget.CardView>-->
+</LinearLayout>
